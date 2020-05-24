@@ -29,7 +29,11 @@ namespace Reenbit.IMS.WebAPI
 
             services.AddAutoMapper(typeof(InvoiceProfile));
 
-            services.AddControllers();
+            services.AddControllers()
+                    .ConfigureApiBehaviorOptions(options =>
+                    {
+                        options.SuppressMapClientErrors = true;
+                    });
 
             ConfigureSwagger(services);
         }
