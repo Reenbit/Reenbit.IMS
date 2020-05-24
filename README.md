@@ -6,4 +6,24 @@ This repository contains a set of RESTful APIs for invoice management operations
 ![Swagger page](/Images/swagger-page.PNG)
 
 ## Technology stack
-ASP.NET Core, Azure Cosmos DB, Azure Functions
+ASP.NET Core, Azure Cosmos DB, Azure Functions (Cosmos DB trigger)
+
+## Demo
+
+- #### User 1 creates an initial invoice document
+  ![Create invoice request](/Images/CreateInvoiceRequest.PNG)
+  
+  ![Create invoice response](/Images/CreateInvoiceResponse.PNG)
+  
+  ![Created invoice](/Images/CreatedInvoiceInDb.PNG)
+  
+- #### User 1 updates previously created invoice
+  ![Update invoice by user 1](/Images/UpdateInvoiceByUser1.PNG)
+- #### User 2 updates the same invoice
+  ![Update invoice by user 2](/Images/UpdateInvoiceByUser2.PNG)
+- #### Azure Function output (two 'TrackInvoiceUpdates' events handled)
+  ![Azure Function Output](/Images/AzureFunctionOutput.PNG)
+- #### Audit log results in database
+  ![Audit Log 1](/Images/AuditLog1.PNG)
+  ![Audit Log 2](/Images/AuditLog2.PNG)
+  
