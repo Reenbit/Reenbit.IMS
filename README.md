@@ -30,4 +30,5 @@ ASP.NET Core, Azure Cosmos DB, Azure Functions (Cosmos DB trigger)
 ## Notes
 - **"actor-id"** request header is passed to APIs just for demo purposes (to simulate multiple users)
 - all audit log records are collected into separate Cosmos DB container
-- only last update log information is a part of 'Invoice' document, which avoids keeping a 'huge' document as a result of many updates   
+- only **last update log** information is a part of 'Invoice' document, which prevents from 
+keeping a 'huge' document as a result of many updates   
