@@ -26,4 +26,8 @@ ASP.NET Core, Azure Cosmos DB, Azure Functions (Cosmos DB trigger)
 - #### Audit log results in database
   ![Audit Log 1](/Images/AuditLog1.PNG)
   ![Audit Log 2](/Images/AuditLog2.PNG)
-  
+ 
+## Notes
+- **"actor-id"** request header is passed to APIs just for demo purposes (to simulate multiple users)
+- all audit log records are collected into separate Cosmos DB container
+- only last update log information is a part of 'Invoice' document, which avoids keeping a 'huge' document as a result of many updates   
